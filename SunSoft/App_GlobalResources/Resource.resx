@@ -132,14 +132,23 @@
   <data name="avast" xml:space="preserve">
     <value>Avast</value>
   </data>
+  <data name="DBMS" xml:space="preserve">
+    <value>СУБД</value>
+  </data>
   <data name="deleviry" xml:space="preserve">
     <value>Бесплатная и быстрая доставка</value>
   </data>
   <data name="email" xml:space="preserve">
     <value>sun30point@gmail.com</value>
   </data>
+  <data name="engineering" xml:space="preserve">
+    <value>Инжернерное ПО</value>
+  </data>
   <data name="esset" xml:space="preserve">
     <value>Esset</value>
+  </data>
+  <data name="home" xml:space="preserve">
+    <value>Домашняя</value>
   </data>
   <data name="login" xml:space="preserve">
     <value>Вход</value>
@@ -150,14 +159,29 @@
   <data name="microsoft" xml:space="preserve">
     <value>Microsoft</value>
   </data>
+  <data name="officeSystems" xml:space="preserve">
+    <value>Офисные системы</value>
+  </data>
+  <data name="os" xml:space="preserve">
+    <value>Операционные системы</value>
+  </data>
+  <data name="programmingSystems" xml:space="preserve">
+    <value>Системы програмирования</value>
+  </data>
   <data name="search" xml:space="preserve">
     <value>Поиск</value>
+  </data>
+  <data name="serviceSystems" xml:space="preserve">
+    <value>Сервисные системы</value>
   </data>
   <data name="sketchUp" xml:space="preserve">
     <value>SketchUp</value>
   </data>
   <data name="subCategories" xml:space="preserve">
     <value>Подкатегории</value>
+  </data>
+  <data name="textEditors" xml:space="preserve">
+    <value>Текстовые редакторы</value>
   </data>
   <data name="title" xml:space="preserve">
     <value>SunPoint Software</value>

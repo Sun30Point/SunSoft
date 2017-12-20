@@ -267,6 +267,9 @@
     <Content Include="Content\images\d2.jpg" />
     <Content Include="Content\images\d3.jpg" />
     <Content Include="Content\images\d4.jpg" />
+    <Content Include="Content\images\der1.jpg" />
+    <Content Include="Content\images\der2.jpg" />
+    <Content Include="Content\images\der3.jpg" />
     <Content Include="Content\images\dig.jpg" />
     <Content Include="Content\images\e1.jpg" />
     <Content Include="Content\images\e2.jpg" />

@@ -106,6 +106,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, такую же, как СУБД.
+        /// </summary>
+        internal static string DBMS {
+            get {
+                return ResourceManager.GetString("DBMS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, такую же, как Бесплатная и быстрая доставка.
         /// </summary>
         internal static string deleviry {
@@ -124,11 +133,29 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, такую же, как Инжернерное ПО.
+        /// </summary>
+        internal static string engineering {
+            get {
+                return ResourceManager.GetString("engineering", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, такую же, как Esset.
         /// </summary>
         internal static string esset {
             get {
                 return ResourceManager.GetString("esset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Домашняя.
+        /// </summary>
+        internal static string home {
+            get {
+                return ResourceManager.GetString("home", resourceCulture);
             }
         }
         
@@ -160,11 +187,47 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, такую же, как Офисные системы.
+        /// </summary>
+        internal static string officeSystems {
+            get {
+                return ResourceManager.GetString("officeSystems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Операционные системы.
+        /// </summary>
+        internal static string os {
+            get {
+                return ResourceManager.GetString("os", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Системы програмирования.
+        /// </summary>
+        internal static string programmingSystems {
+            get {
+                return ResourceManager.GetString("programmingSystems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, такую же, как Поиск.
         /// </summary>
         internal static string search {
             get {
                 return ResourceManager.GetString("search", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Сервисные системы.
+        /// </summary>
+        internal static string serviceSystems {
+            get {
+                return ResourceManager.GetString("serviceSystems", resourceCulture);
             }
         }
         
@@ -183,6 +246,15 @@ namespace Resources {
         internal static string subCategories {
             get {
                 return ResourceManager.GetString("subCategories", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Текстовые редакторы.
+        /// </summary>
+        internal static string textEditors {
+            get {
+                return ResourceManager.GetString("textEditors", resourceCulture);
             }
         }
         
