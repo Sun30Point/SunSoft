@@ -192,4 +192,22 @@
   <data name="zwsoft" xml:space="preserve">
     <value>ZWSoft</value>
   </data>
+  <data name="categories" xml:space="preserve">
+    <value>Категории</value>
+  </data>
+  <data name="description" xml:space="preserve">
+    <value>Программного обеспечения ведущих производителей по справедливым и гибким ценам для домашнего пользователя для крупных предприятий.</value>
+  </data>
+  <data name="emptyCart" xml:space="preserve">
+    <value>Пустая корзина</value>
+  </data>
+  <data name="information" xml:space="preserve">
+    <value>Информация</value>
+  </data>
+  <data name="items" xml:space="preserve">
+    <value>элементов</value>
+  </data>
+  <data name="subscription" xml:space="preserve">
+    <value>ПОДПИСАТЬСЯ НА РАССЫЛКУ!</value>
+  </data>
 </root>

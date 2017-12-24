@@ -106,6 +106,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, такую же, как Категории.
+        /// </summary>
+        internal static string categories {
+            get {
+                return ResourceManager.GetString("categories", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, такую же, как СУБД.
         /// </summary>
         internal static string DBMS {
@@ -124,11 +133,29 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, такую же, как Программного обеспечения ведущих производителей по справедливым и гибким ценам для домашнего пользователя для крупных предприятий..
+        /// </summary>
+        internal static string description {
+            get {
+                return ResourceManager.GetString("description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, такую же, как sun30point@gmail.com.
         /// </summary>
         internal static string email {
             get {
                 return ResourceManager.GetString("email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Пустая корзина.
+        /// </summary>
+        internal static string emptyCart {
+            get {
+                return ResourceManager.GetString("emptyCart", resourceCulture);
             }
         }
         
@@ -156,6 +183,24 @@ namespace Resources {
         internal static string home {
             get {
                 return ResourceManager.GetString("home", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Информация.
+        /// </summary>
+        internal static string information {
+            get {
+                return ResourceManager.GetString("information", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как элементов.
+        /// </summary>
+        internal static string items {
+            get {
+                return ResourceManager.GetString("items", resourceCulture);
             }
         }
         
@@ -246,6 +291,15 @@ namespace Resources {
         internal static string subCategories {
             get {
                 return ResourceManager.GetString("subCategories", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как ПОДПИСАТЬСЯ НА РАССЫЛКУ!.
+        /// </summary>
+        internal static string subscription {
+            get {
+                return ResourceManager.GetString("subscription", resourceCulture);
             }
         }
         

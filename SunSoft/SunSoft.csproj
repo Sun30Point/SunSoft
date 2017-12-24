@@ -317,6 +317,7 @@
     <Content Include="Content\images\wed2.jpg" />
     <Content Include="Content\images\woo.jpg" />
     <Content Include="Content\images\woo1.jpg" />
+    <Content Include="Content\images\woo1.png" />
     <Content Include="Content\js\bootstrap-3.1.1.min.js" />
     <Content Include="Content\js\easyResponsiveTabs.js" />
     <Content Include="Content\js\imagezoom.js" />
