@@ -70,6 +70,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, такую же, как Адресс.
+        /// </summary>
+        internal static string adress {
+            get {
+                return ResourceManager.GetString("adress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Киев, Серпова, 11.
+        /// </summary>
+        internal static string adressActual {
+            get {
+                return ResourceManager.GetString("adressActual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, такую же, как Все категории.
         /// </summary>
         internal static string allCategories {
@@ -84,6 +102,15 @@ namespace Resources {
         internal static string allDeleviry {
             get {
                 return ResourceManager.GetString("allDeleviry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как and.
+        /// </summary>
+        internal static string and {
+            get {
+                return ResourceManager.GetString("and", resourceCulture);
             }
         }
         
@@ -106,11 +133,29 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, такую же, как Войдя в систему, вы соглашаетесь с нашими.
+        /// </summary>
+        internal static string Bylogginginyouagreetoour {
+            get {
+                return ResourceManager.GetString("Bylogginginyouagreetoour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, такую же, как Категории.
         /// </summary>
         internal static string categories {
             get {
                 return ResourceManager.GetString("categories", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Контактная информация.
+        /// </summary>
+        internal static string contactInfo {
+            get {
+                return ResourceManager.GetString("contactInfo", resourceCulture);
             }
         }
         
@@ -142,11 +187,20 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, такую же, как sun30point@gmail.com.
+        ///   Ищет локализованную строку, такую же, как Email.
         /// </summary>
         internal static string email {
             get {
                 return ResourceManager.GetString("email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как sun30point@gmail.com.
+        /// </summary>
+        internal static string emailActual {
+            get {
+                return ResourceManager.GetString("emailActual", resourceCulture);
             }
         }
         
@@ -178,6 +232,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, такую же, как Забыли пароль!.
+        /// </summary>
+        internal static string forgotPassword {
+            get {
+                return ResourceManager.GetString("forgotPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, такую же, как Домашняя.
         /// </summary>
         internal static string home {
@@ -201,6 +264,15 @@ namespace Resources {
         internal static string items {
             get {
                 return ResourceManager.GetString("items", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как JetBrains.
+        /// </summary>
+        internal static string jetbrains {
+            get {
+                return ResourceManager.GetString("jetbrains", resourceCulture);
             }
         }
         
@@ -250,11 +322,74 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, такую же, как Пароль.
+        /// </summary>
+        internal static string password {
+            get {
+                return ResourceManager.GetString("password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Телефон.
+        /// </summary>
+        internal static string phone {
+            get {
+                return ResourceManager.GetString("phone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как +380677617676.
+        /// </summary>
+        internal static string phoneActual {
+            get {
+                return ResourceManager.GetString("phoneActual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как политика конфиденциальности.
+        /// </summary>
+        internal static string privacyPolicy {
+            get {
+                return ResourceManager.GetString("privacyPolicy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, такую же, как Системы програмирования.
         /// </summary>
         internal static string programmingSystems {
             get {
                 return ResourceManager.GetString("programmingSystems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Зарегистрировать сейчас..
+        /// </summary>
+        internal static string registerNow {
+            get {
+                return ResourceManager.GetString("registerNow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Напомнить мне!.
+        /// </summary>
+        internal static string rememberMe {
+            get {
+                return ResourceManager.GetString("rememberMe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Перезаписать пароль.
+        /// </summary>
+        internal static string reTypePassword {
+            get {
+                return ResourceManager.GetString("reTypePassword", resourceCulture);
             }
         }
         
@@ -268,11 +403,38 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, такую же, как Подпишитесь бесплатно.
+        /// </summary>
+        internal static string seengUpFree {
+            get {
+                return ResourceManager.GetString("seengUpFree", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, такую же, как Сервисные системы.
         /// </summary>
         internal static string serviceSystems {
             get {
                 return ResourceManager.GetString("serviceSystems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Войти!.
+        /// </summary>
+        internal static string SIGNIN {
+            get {
+                return ResourceManager.GetString("SIGNIN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Войдите в свою учетную запись.
+        /// </summary>
+        internal static string signInYourAccount {
+            get {
+                return ResourceManager.GetString("signInYourAccount", resourceCulture);
             }
         }
         
@@ -295,11 +457,29 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, такую же, как ПОДПИСАТЬСЯ НА РАССЫЛКУ!.
+        ///   Ищет локализованную строку, такую же, как Подписаться.
+        /// </summary>
+        internal static string submit {
+            get {
+                return ResourceManager.GetString("submit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Рассылка.
         /// </summary>
         internal static string subscription {
             get {
                 return ResourceManager.GetString("subscription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Условия и положения.
+        /// </summary>
+        internal static string TermsAndConditions {
+            get {
+                return ResourceManager.GetString("TermsAndConditions", resourceCulture);
             }
         }
         

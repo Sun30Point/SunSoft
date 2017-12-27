@@ -138,7 +138,7 @@
   <data name="deleviry" xml:space="preserve">
     <value>Бесплатная и быстрая доставка</value>
   </data>
-  <data name="email" xml:space="preserve">
+  <data name="emailActual" xml:space="preserve">
     <value>sun30point@gmail.com</value>
   </data>
   <data name="engineering" xml:space="preserve">
@@ -208,6 +208,66 @@
     <value>элементов</value>
   </data>
   <data name="subscription" xml:space="preserve">
-    <value>ПОДПИСАТЬСЯ НА РАССЫЛКУ!</value>
+    <value>Рассылка</value>
+  </data>
+  <data name="adress" xml:space="preserve">
+    <value>Адресс</value>
+  </data>
+  <data name="adressActual" xml:space="preserve">
+    <value>Киев, Серпова, 11</value>
+  </data>
+  <data name="contactInfo" xml:space="preserve">
+    <value>Контактная информация</value>
+  </data>
+  <data name="email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="phone" xml:space="preserve">
+    <value>Телефон</value>
+  </data>
+  <data name="phoneActual" xml:space="preserve">
+    <value>+380677617676</value>
+  </data>
+  <data name="submit" xml:space="preserve">
+    <value>Подписаться</value>
+  </data>
+  <data name="and" xml:space="preserve">
+    <value>and</value>
+  </data>
+  <data name="Bylogginginyouagreetoour" xml:space="preserve">
+    <value>Войдя в систему, вы соглашаетесь с нашими</value>
+  </data>
+  <data name="forgotPassword" xml:space="preserve">
+    <value>Забыли пароль!</value>
+  </data>
+  <data name="password" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="privacyPolicy" xml:space="preserve">
+    <value>политика конфиденциальности</value>
+  </data>
+  <data name="registerNow" xml:space="preserve">
+    <value>Зарегистрировать сейчас.</value>
+  </data>
+  <data name="rememberMe" xml:space="preserve">
+    <value>Напомнить мне!</value>
+  </data>
+  <data name="reTypePassword" xml:space="preserve">
+    <value>Перезаписать пароль</value>
+  </data>
+  <data name="seengUpFree" xml:space="preserve">
+    <value>Подпишитесь бесплатно</value>
+  </data>
+  <data name="SIGNIN" xml:space="preserve">
+    <value>Войти!</value>
+  </data>
+  <data name="signInYourAccount" xml:space="preserve">
+    <value>Войдите в свою учетную запись</value>
+  </data>
+  <data name="TermsAndConditions" xml:space="preserve">
+    <value>Условия и положения</value>
+  </data>
+  <data name="jetbrains" xml:space="preserve">
+    <value>JetBrains</value>
   </data>
 </root>

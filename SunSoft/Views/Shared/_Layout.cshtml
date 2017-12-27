@@ -23,7 +23,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
     <!-- //pignose css -->
-    <link href="~/Content/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/Content/css/style.css?v=111" rel="stylesheet" type="text/css" media="all" />
     <!-- js -->
     <script type="text/javascript" src="~/Content/js/jquery-2.1.4.min.js"></script>
     <!-- //js -->
@@ -44,7 +44,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <ul>
                 <li><span class="glyphicon glyphicon-time" aria-hidden="true"></span>@Resources.Resource.deleviry</li>
                 <li><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>@Resources.Resource.allDeleviry</li>
-                <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:@Resources.Resource.email">@Resources.Resource.email</a></li>
+                <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:@Resources.Resource.email">@Resources.Resource.emailActual</a></li>
             </ul>
         </div>
     </div>
@@ -206,8 +206,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="col-sm-6 newsright">
                     <form>
-                        <input type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-                        <input type="submit" value="Submit">
+                        <input type="text" value="@Resources.Resource.email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '@Resources.Resource.email';}" required="">
+                        <input type="submit" value="@Resources.Resource.submit">
                     </form>
                 </div>
                 <div class="clearfix"></div>
@@ -215,37 +215,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="col-md-4 sign-gd">
                         <h4>@Resources.Resource.information</h4>
                         <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="mens.html">Men's Wear</a></li>
-                            <li><a href="womens.html">Women's Wear</a></li>
-                            <li><a href="electronics.html">Electronics</a></li>
-                            <li><a href="codes.html">Short Codes</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="index.html">@Resources.Resource.home</a></li>
+                            <li><a href="mens.html">@Resources.Resource.venders</a></li>
+                            <li><a href="womens.html">@Resources.Resource.categories</a></li>
                         </ul>
                     </div>
 
                     <div class="col-md-4 sign-gd-two">
-                        <h4>Store Information</h4>
+                        <h4>@Resources.Resource.contactInfo</h4>
                         <ul>
-                            <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Address : 1234k Avenue, 4th block, <span>Newyork City.</span></li>
-                            <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Email : <a href="mailto:info@example.com">info@example.com</a></li>
-                            <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>Phone : +1234 567 567</li>
+                            <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>@Resources.Resource.adress : @Resources.Resource.adressActual</li>
+                            <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>@Resources.Resource.email : <a href="mailto:@Resources.Resource.emailActual">@Resources.Resource.emailActual</a></li>
+                            <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>@Resources.Resource.phone : @Resources.Resource.phoneActual</li>
                         </ul>
                     </div>
-                    <div class="col-md-4 sign-gd flickr-post">
-                        <h4>Flickr Posts</h4>
-                        <ul>
-                            <li><a href="single.html"><img src="~/Content/images/b15.jpg" alt=" " class="img-responsive" /></a></li>
-                            <li><a href="single.html"><img src="~/Content/images/b16.jpg" alt=" " class="img-responsive" /></a></li>
-                            <li><a href="single.html"><img src="~/Content/images/b17.jpg" alt=" " class="img-responsive" /></a></li>
-                            <li><a href="single.html"><img src="~/Content/images/b18.jpg" alt=" " class="img-responsive" /></a></li>
-                            <li><a href="single.html"><img src="~/Content/images/b15.jpg" alt=" " class="img-responsive" /></a></li>
-                            <li><a href="single.html"><img src="~/Content/images/b16.jpg" alt=" " class="img-responsive" /></a></li>
-                            <li><a href="single.html"><img src="~/Content/images/b17.jpg" alt=" " class="img-responsive" /></a></li>
-                            <li><a href="single.html"><img src="~/Content/images/b18.jpg" alt=" " class="img-responsive" /></a></li>
-                            <li><a href="single.html"><img src="~/Content/images/b15.jpg" alt=" " class="img-responsive" /></a></li>
-                        </ul>
-                    </div>
+                    
                     <div class="clearfix"></div>
                 </div>
             </div>
@@ -265,52 +249,52 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="login-grids">
                         <div class="login">
                             <div class="login-bottom">
-                                <h3>Sign up for free</h3>
+                                <h3>@Resources.Resource.seengUpFree</h3>
                                 <form>
                                     <div class="sign-up">
-                                        <h4>Email :</h4>
-                                        <input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">
+                                        <h4>@Resources.Resource.email :</h4>
+                                        <input type="text" value="Type here" onfocus="this.value = '';" onblur="    if (this.value == '') { this.value = '@Resources.Resource.email'; }" required="">
                                     </div>
                                     <div class="sign-up">
-                                        <h4>Password :</h4>
-                                        <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
+                                        <h4>@Resources.Resource.password :</h4>
+                                        <input type="password" value="Password" onfocus="this.value = '';" onblur="    if (this.value == '') { this.value = '@Resources.Resource.password'; }" required="">
 
                                     </div>
                                     <div class="sign-up">
-                                        <h4>Re-type Password :</h4>
-                                        <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
+                                        <h4>@Resources.Resource.reTypePassword :</h4>
+                                        <input type="password" value="Password" onfocus="this.value = '';" onblur="    if (this.value == '') { this.value = '@Resources.Resource.password'; }" required="">
 
                                     </div>
                                     <div class="sign-up">
-                                        <input type="submit" value="REGISTER NOW">
+                                        <input type="submit" value="@Resources.Resource.registerNow">
                                     </div>
 
                                 </form>
                             </div>
                             <div class="login-right">
-                                <h3>Sign in with your account</h3>
+                                <h3>@Resources.Resource.signInYourAccount</h3>
                                 <form>
                                     <div class="sign-in">
-                                        <h4>Email :</h4>
-                                        <input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">
+                                        <h4>@Resources.Resource.signInYourAccount :</h4>
+                                        <input type="text" value="Type here" onfocus="this.value = '';" onblur="    if (this.value == '') { this.value = '@Resources.Resource.email'; }" required="">
                                     </div>
                                     <div class="sign-in">
-                                        <h4>Password :</h4>
-                                        <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
-                                        <a href="#">Forgot password?</a>
+                                        <h4>@Resources.Resource.password :</h4>
+                                        <input type="password" value="@Resources.Resource.password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '@Resources.Resource.password';}" required="">
+                                        <a href="#">@Resources.Resource.forgotPassword ?</a>
                                     </div>
                                     <div class="single-bottom">
                                         <input type="checkbox" id="brand" value="">
-                                        <label for="brand"><span></span>Remember Me.</label>
+                                        <label for="brand"><span></span>@Resources.Resource.rememberMe.</label>
                                     </div>
                                     <div class="sign-in">
-                                        <input type="submit" value="SIGNIN">
+                                        <input type="submit" value="@Resources.Resource.SIGNIN">
                                     </div>
                                 </form>
                             </div>
                             <div class="clearfix"></div>
                         </div>
-                        <p>By logging in you agree to our <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></p>
+                        <p>@Resources.Resource.Bylogginginyouagreetoour <a href="#">@Resources.Resource.TermsAndConditions</a>@Resources.Resource.and<a href="#">@Resources.Resource.privacyPolicy</a></p>
                     </div>
                 </div>
             </div>
