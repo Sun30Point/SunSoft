@@ -80,6 +80,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -218,6 +220,33 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Entity\Categories.cs">
+      <DependentUpon>SunSoftDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\CurrencyUnits.cs">
+      <DependentUpon>SunSoftDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Prices.cs">
+      <DependentUpon>SunSoftDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\SunSoftDBModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SunSoftDBModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\SunSoftDBModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SunSoftDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\SunSoftDBModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SunSoftDBModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Venders.cs">
+      <DependentUpon>SunSoftDBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -328,6 +357,16 @@
     <Content Include="Content\js\pignose.layerslider.js" />
     <Content Include="Content\js\responsiveslides.min.js" />
     <Content Include="Content\js\simpleCart.min.js" />
+    <Content Include="Entity\SunSoftDBModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SunSoftDBModel.edmx</DependentUpon>
+      <LastGenOutput>SunSoftDBModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Entity\SunSoftDBModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SunSoftDBModel.edmx</DependentUpon>
+      <LastGenOutput>SunSoftDBModel.cs</LastGenOutput>
+    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -339,6 +378,13 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <EntityDeploy Include="Entity\SunSoftDBModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SunSoftDBModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Entity\SunSoftDBModel.edmx.diagram">
+      <DependentUpon>SunSoftDBModel.edmx</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\SunSoft - FTP %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\SunSoft - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\SunSoft - Web Deploy %282%29.pubxml" />
@@ -424,6 +470,9 @@
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>Resource.et.designer.cs</LastGenOutput>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
