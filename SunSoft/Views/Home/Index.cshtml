@@ -1,4 +1,24 @@
-﻿
+﻿@{ 
+    using (SunSoft.Entity.SunSoftDBEntities db = new SunSoft.Entity.SunSoftDBEntities())
+    {
+        var entity = from p in db.Prices
+                           join c in db.Categories on p.CategoryID equals c.Id
+                           join v in db.Venders on p.VenderID equals v.Id
+                           join u in db.CurrencyUnits on p.CurrencyUnitID equals u.Id
+
+                           select new
+                           {
+                               Name = p.NameRu,
+                               Description = p.DescriptionRu,
+                               PriceNew = p.Price,
+                               PriceOld = p.PriceOld,
+                               Unit = u.NameRu,
+                               Vender = v.NameRu,
+                               UnitSymbol = u.Symbol,
+                               IsNew = p.IsNew
+                           };
+    }
+}
 
 
 <!-- banner -->

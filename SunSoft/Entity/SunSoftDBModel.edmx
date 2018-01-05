@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище SunSoftDBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Хранилище SunSoftDBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Categories">
           <Key>
             <PropertyRef Name="Id" />
@@ -46,6 +46,7 @@
           <Property Name="CategoryID" Type="int" />
           <Property Name="CurrencyUnitID" Type="int" />
           <Property Name="VenderID" Type="int" />
+          <Property Name="IsNew" Type="bit" />
           <Property Name="IsActive" Type="bit" />
         </EntityType>
         <EntityType Name="Venders">
@@ -112,8 +113,7 @@
             <End Role="Prices" EntitySet="Prices" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SunSoftDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -126,7 +126,7 @@
           <Property Name="NameUk" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="NameEn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="NameEs" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Prices" Relationship="Self.FK_Prices_Categories" FromRole="Categories" ToRole="Prices" />
+          <NavigationProperty Name="Prices" Relationship="SunSoftDBModel.FK_Prices_Categories" FromRole="Categories" ToRole="Prices" />
         </EntityType>
         <EntityType Name="CurrencyUnits">
           <Key>
@@ -138,8 +138,37 @@
           <Property Name="NameEn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="NameEs" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Symbol" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Prices" Relationship="Self.FK_Prices_CurrencyUnits" FromRole="CurrencyUnits" ToRole="Prices" />
+          <NavigationProperty Name="Prices" Relationship="SunSoftDBModel.FK_Prices_CurrencyUnits" FromRole="CurrencyUnits" ToRole="Prices" />
         </EntityType>
+        <EntityType Name="Venders">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameRu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NameUk" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NameEn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NameEs" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Prices" Relationship="SunSoftDBModel.FK_Prices_Venders" FromRole="Venders" ToRole="Prices" />
+        </EntityType>
+        <EntityContainer Name="SunSoftDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Categories" EntityType="Self.Categories" />
+          <EntitySet Name="CurrencyUnits" EntityType="Self.CurrencyUnits" />
+          <EntitySet Name="Venders" EntityType="Self.Venders" />
+          <EntitySet Name="Prices" EntityType="SunSoftDBModel.Prices" />
+          <AssociationSet Name="FK_Prices_Categories" Association="SunSoftDBModel.FK_Prices_Categories">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Prices" EntitySet="Prices" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Prices_CurrencyUnits" Association="SunSoftDBModel.FK_Prices_CurrencyUnits">
+            <End Role="CurrencyUnits" EntitySet="CurrencyUnits" />
+            <End Role="Prices" EntitySet="Prices" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Prices_Venders" Association="SunSoftDBModel.FK_Prices_Venders">
+            <End Role="Venders" EntitySet="Venders" />
+            <End Role="Prices" EntitySet="Prices" />
+          </AssociationSet>
+          </EntityContainer>
         <EntityType Name="Prices">
           <Key>
             <PropertyRef Name="Id" />
@@ -160,25 +189,15 @@
           <Property Name="CategoryID" Type="Int32" />
           <Property Name="CurrencyUnitID" Type="Int32" />
           <Property Name="VenderID" Type="Int32" />
+          <Property Name="IsNew" Type="Boolean" />
           <Property Name="IsActive" Type="Boolean" />
-          <NavigationProperty Name="Categories" Relationship="Self.FK_Prices_Categories" FromRole="Prices" ToRole="Categories" />
-          <NavigationProperty Name="CurrencyUnits" Relationship="Self.FK_Prices_CurrencyUnits" FromRole="Prices" ToRole="CurrencyUnits" />
-          <NavigationProperty Name="Venders" Relationship="Self.FK_Prices_Venders" FromRole="Prices" ToRole="Venders" />
-        </EntityType>
-        <EntityType Name="Venders">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NameRu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="NameUk" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="NameEn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="NameEs" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Prices" Relationship="Self.FK_Prices_Venders" FromRole="Venders" ToRole="Prices" />
+          <NavigationProperty Name="Categories" Relationship="SunSoftDBModel.FK_Prices_Categories" FromRole="Prices" ToRole="Categories" />
+          <NavigationProperty Name="CurrencyUnits" Relationship="SunSoftDBModel.FK_Prices_CurrencyUnits" FromRole="Prices" ToRole="CurrencyUnits" />
+          <NavigationProperty Name="Venders" Relationship="SunSoftDBModel.FK_Prices_Venders" FromRole="Prices" ToRole="Venders" />
         </EntityType>
         <Association Name="FK_Prices_Categories">
-          <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
-          <End Role="Prices" Type="Self.Prices" Multiplicity="*" />
+          <End Type="SunSoftDBModel.Categories" Role="Categories" Multiplicity="0..1" />
+          <End Type="SunSoftDBModel.Prices" Role="Prices" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Categories">
               <PropertyRef Name="Id" />
@@ -189,8 +208,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Prices_CurrencyUnits">
-          <End Role="CurrencyUnits" Type="Self.CurrencyUnits" Multiplicity="0..1" />
-          <End Role="Prices" Type="Self.Prices" Multiplicity="*" />
+          <End Type="SunSoftDBModel.CurrencyUnits" Role="CurrencyUnits" Multiplicity="0..1" />
+          <End Type="SunSoftDBModel.Prices" Role="Prices" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CurrencyUnits">
               <PropertyRef Name="Id" />
@@ -201,8 +220,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Prices_Venders">
-          <End Role="Venders" Type="Self.Venders" Multiplicity="0..1" />
-          <End Role="Prices" Type="Self.Prices" Multiplicity="*" />
+          <End Type="SunSoftDBModel.Venders" Role="Venders" Multiplicity="0..1" />
+          <End Type="SunSoftDBModel.Prices" Role="Prices" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Venders">
               <PropertyRef Name="Id" />
@@ -212,24 +231,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="SunSoftDBEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Categories" EntityType="Self.Categories" />
-          <EntitySet Name="CurrencyUnits" EntityType="Self.CurrencyUnits" />
-          <EntitySet Name="Prices" EntityType="Self.Prices" />
-          <EntitySet Name="Venders" EntityType="Self.Venders" />
-          <AssociationSet Name="FK_Prices_Categories" Association="Self.FK_Prices_Categories">
-            <End Role="Categories" EntitySet="Categories" />
-            <End Role="Prices" EntitySet="Prices" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Prices_CurrencyUnits" Association="Self.FK_Prices_CurrencyUnits">
-            <End Role="CurrencyUnits" EntitySet="CurrencyUnits" />
-            <End Role="Prices" EntitySet="Prices" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Prices_Venders" Association="Self.FK_Prices_Venders">
-            <End Role="Venders" EntitySet="Venders" />
-            <End Role="Prices" EntitySet="Prices" />
-          </AssociationSet>
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -259,29 +260,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Prices">
-            <EntityTypeMapping TypeName="SunSoftDBModel.Prices">
-              <MappingFragment StoreEntitySet="Prices">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="NameRu" ColumnName="NameRu" />
-                <ScalarProperty Name="NameUk" ColumnName="NameUk" />
-                <ScalarProperty Name="NameEn" ColumnName="NameEn" />
-                <ScalarProperty Name="NameEs" ColumnName="NameEs" />
-                <ScalarProperty Name="DescriptionRu" ColumnName="DescriptionRu" />
-                <ScalarProperty Name="DescriptionUk" ColumnName="DescriptionUk" />
-                <ScalarProperty Name="DescriptionEn" ColumnName="DescriptionEn" />
-                <ScalarProperty Name="DescriptionEs" ColumnName="DescriptionEs" />
-                <ScalarProperty Name="FrontImgUrl" ColumnName="FrontImgUrl" />
-                <ScalarProperty Name="BackImgUrl" ColumnName="BackImgUrl" />
-                <ScalarProperty Name="Price" ColumnName="Price" />
-                <ScalarProperty Name="PriceOld" ColumnName="PriceOld" />
-                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
-                <ScalarProperty Name="CurrencyUnitID" ColumnName="CurrencyUnitID" />
-                <ScalarProperty Name="VenderID" ColumnName="VenderID" />
-                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Venders">
             <EntityTypeMapping TypeName="SunSoftDBModel.Venders">
               <MappingFragment StoreEntitySet="Venders">
@@ -290,6 +268,30 @@
                 <ScalarProperty Name="NameUk" ColumnName="NameUk" />
                 <ScalarProperty Name="NameEn" ColumnName="NameEn" />
                 <ScalarProperty Name="NameEs" ColumnName="NameEs" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Prices">
+            <EntityTypeMapping TypeName="SunSoftDBModel.Prices">
+              <MappingFragment StoreEntitySet="Prices">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsNew" ColumnName="IsNew" />
+                <ScalarProperty Name="VenderID" ColumnName="VenderID" />
+                <ScalarProperty Name="CurrencyUnitID" ColumnName="CurrencyUnitID" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="PriceOld" ColumnName="PriceOld" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="BackImgUrl" ColumnName="BackImgUrl" />
+                <ScalarProperty Name="FrontImgUrl" ColumnName="FrontImgUrl" />
+                <ScalarProperty Name="DescriptionEs" ColumnName="DescriptionEs" />
+                <ScalarProperty Name="DescriptionEn" ColumnName="DescriptionEn" />
+                <ScalarProperty Name="DescriptionUk" ColumnName="DescriptionUk" />
+                <ScalarProperty Name="DescriptionRu" ColumnName="DescriptionRu" />
+                <ScalarProperty Name="NameEs" ColumnName="NameEs" />
+                <ScalarProperty Name="NameEn" ColumnName="NameEn" />
+                <ScalarProperty Name="NameUk" ColumnName="NameUk" />
+                <ScalarProperty Name="NameRu" ColumnName="NameRu" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

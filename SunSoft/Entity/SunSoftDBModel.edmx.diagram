@@ -7,11 +7,11 @@
       <Diagram DiagramId="2f06653004f3422cbc0d4151d08559f6" Name="Diagram1">
         <EntityTypeShape EntityType="SunSoftDBModel.Categories" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
         <EntityTypeShape EntityType="SunSoftDBModel.CurrencyUnits" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SunSoftDBModel.Prices" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
         <EntityTypeShape EntityType="SunSoftDBModel.Venders" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
-        <AssociationConnector Association="SunSoftDBModel.FK_Prices_Categories" ManuallyRouted="false" />
-        <AssociationConnector Association="SunSoftDBModel.FK_Prices_CurrencyUnits" ManuallyRouted="false" />
-        <AssociationConnector Association="SunSoftDBModel.FK_Prices_Venders" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="SunSoftDBModel.Prices" Width="1.5" PointX="3" PointY="2.875" />
+        <AssociationConnector Association="SunSoftDBModel.FK_Prices_Categories" />
+        <AssociationConnector Association="SunSoftDBModel.FK_Prices_CurrencyUnits" />
+        <AssociationConnector Association="SunSoftDBModel.FK_Prices_Venders" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

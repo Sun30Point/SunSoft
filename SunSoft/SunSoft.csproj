@@ -336,6 +336,10 @@
     <Content Include="Content\images\ph3.png" />
     <Content Include="Content\images\ph4.png" />
     <Content Include="Content\images\search.png" />
+    <Content Include="Content\images\SP_ADOBE.png" />
+    <Content Include="Content\images\SP_ATLASSIAN.png" />
+    <Content Include="Content\images\SP_Jetbrains.png" />
+    <Content Include="Content\images\SP_MCAffee.png" />
     <Content Include="Content\images\tick-mark1.png" />
     <Content Include="Content\images\w1.png" />
     <Content Include="Content\images\w2.png" />

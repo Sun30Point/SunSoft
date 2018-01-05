@@ -30,6 +30,7 @@ namespace SunSoft.Entity
         public Nullable<int> CategoryID { get; set; }
         public Nullable<int> CurrencyUnitID { get; set; }
         public Nullable<int> VenderID { get; set; }
+        public Nullable<bool> IsNew { get; set; }
         public Nullable<bool> IsActive { get; set; }
     
         public virtual Categories Categories { get; set; }

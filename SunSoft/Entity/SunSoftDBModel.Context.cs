@@ -27,7 +27,7 @@ namespace SunSoft.Entity
     
         public virtual DbSet<Categories> Categories { get; set; }
         public virtual DbSet<CurrencyUnits> CurrencyUnits { get; set; }
-        public virtual DbSet<Prices> Prices { get; set; }
         public virtual DbSet<Venders> Venders { get; set; }
+        public virtual DbSet<Prices> Prices { get; set; }
     }
 }
