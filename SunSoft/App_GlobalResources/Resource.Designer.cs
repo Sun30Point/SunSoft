@@ -61,6 +61,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, такую же, как Добавить в корзину.
+        /// </summary>
+        internal static string addToCart {
+            get {
+                return ResourceManager.GetString("addToCart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, такую же, как Adobe.
         /// </summary>
         internal static string adobe {
@@ -304,6 +313,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, такую же, как Новый.
+        /// </summary>
+        internal static string neW {
+            get {
+                return ResourceManager.GetString("neW", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, такую же, как Офисные системы.
         /// </summary>
         internal static string officeSystems {
@@ -363,6 +381,15 @@ namespace Resources {
         internal static string programmingSystems {
             get {
                 return ResourceManager.GetString("programmingSystems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Быстрый просмотр.
+        /// </summary>
+        internal static string quickView {
+            get {
+                return ResourceManager.GetString("quickView", resourceCulture);
             }
         }
         

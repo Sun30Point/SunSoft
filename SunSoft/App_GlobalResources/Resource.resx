@@ -270,4 +270,13 @@
   <data name="jetbrains" xml:space="preserve">
     <value>JetBrains</value>
   </data>
+  <data name="addToCart" xml:space="preserve">
+    <value>Добавить в корзину</value>
+  </data>
+  <data name="neW" xml:space="preserve">
+    <value>Новый</value>
+  </data>
+  <data name="quickView" xml:space="preserve">
+    <value>Быстрый просмотр</value>
+  </data>
 </root>
