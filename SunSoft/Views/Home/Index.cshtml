@@ -21,9 +21,9 @@
                      ImgFront=p.FrontImgUrl.Replace("~",""),
                      ImgBack=p.BackImgUrl.Replace("~", "")
                  };
-    var entity_attlasian = entity.Where(t => t.VenderID == 1).ToList();
-    var entity_jetbrains = entity.Where(t => t.VenderID == 1).ToList();
-    var entity_macaffee = entity.Where(t => t.VenderID == 1).ToList();
+    var entity_attlasian = entity.Where(t => t.VenderID == 2).ToList();
+    var entity_jetbrains = entity.Where(t => t.VenderID == 5).ToList();
+    var entity_macaffee = entity.Where(t => t.VenderID == 9).ToList();
     var entity_adobe = entity.Where(t => t.VenderID == 1).ToList();
 
 }
@@ -101,6 +101,7 @@
 
                 </ul>
                 <div class="resp-tabs-container">
+                    <h2 class="resp-accordion resp-tab-active" role="tab" aria-controls="tab_item-0"><span class="resp-arrow"></span>@Resources.Resource.atlassian</h2>
                     <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
                        @foreach (var item in entity_attlasian)
                        {
@@ -131,6 +132,7 @@
                         
                         <div class="clearfix"></div>
                     </div>
+                    <h2 class="resp-accordion resp-tab-active" role="tab" aria-controls="tab_item-1"><span class="resp-arrow"></span>@Resources.Resource.atlassian</h2>
                     <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
                       
                         @foreach (var item in entity_jetbrains)
@@ -161,6 +163,8 @@
                         }
                         <div class="clearfix"></div>
                     </div>
+                    <h2 class="resp-accordion resp-tab-active" role="tab" aria-controls="tab_item-2"><span class="resp-arrow"></span>@Resources.Resource.atlassian</h2>
+
                     <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
                         @foreach (var item in entity_macaffee)
                         {
@@ -190,6 +194,8 @@
                         }
                         <div class="clearfix"></div>
                     </div>
+                    <h2 class="resp-accordion resp-tab-active" role="tab" aria-controls="tab_item-3"><span class="resp-arrow"></span>@Resources.Resource.atlassian</h2>
+
                     <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-3">
                         @foreach (var item in entity_adobe)
                         {
