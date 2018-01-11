@@ -8,6 +8,7 @@
 
                  select new
                  {
+                     ID =p.Id,
                      Name = p.NameRu,
                      Description = p.DescriptionRu,
                      PriceNew = p.Price,
@@ -112,7 +113,7 @@
                                     <img src="@item.ImgBack" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
-                                            <a href="single.html" class="link-product-add-cart">@Resources.Resource.quickView</a>
+                                            <a href="~/home/single/@item.ID" class="link-product-add-cart">@Resources.Resource.quickView</a>
                                         </div>
                                     </div>
                                     <span class="product-new-top">@((item.IsNew??false)?Resources.Resource.neW: "")</span>
@@ -144,7 +145,7 @@
                                         <img src="@item.ImgBack" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">@Resources.Resource.quickView</a>
+                                                <a href="~/home/single/@item.ID" class="link-product-add-cart">@Resources.Resource.quickView</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">@((item.IsNew ?? false) ? Resources.Resource.neW : "")</span>
@@ -175,7 +176,7 @@
                                         <img src="@item.ImgBack" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">@Resources.Resource.quickView</a>
+                                                <a href="~/home/single/@item.ID" class="link-product-add-cart">@Resources.Resource.quickView</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">@((item.IsNew ?? false) ? Resources.Resource.neW : "")</span>
@@ -206,7 +207,7 @@
                                         <img src="@item.ImgBack" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">@Resources.Resource.quickView</a>
+                                                <a href="~/home/single/@item.ID" class="link-product-add-cart">@Resources.Resource.quickView</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">@((item.IsNew ?? false) ? Resources.Resource.neW : "")</span>

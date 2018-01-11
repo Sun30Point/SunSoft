@@ -12,6 +12,10 @@ namespace SunSoft.Controllers
         {
             return View();
         }
+        public ActionResult Single()
+        {
+            return View();
+        }
 
         public ActionResult About()
         {
