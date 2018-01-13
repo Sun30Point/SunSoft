@@ -279,4 +279,13 @@
   <data name="quickView" xml:space="preserve">
     <value>Быстрый просмотр</value>
   </data>
+  <data name="descriptionAct" xml:space="preserve">
+    <value>Описание</value>
+  </data>
+  <data name="myShopBag" xml:space="preserve">
+    <value />
+  </data>
+  <data name="productDescription" xml:space="preserve">
+    <value>Описание продукта</value>
+  </data>
 </root>

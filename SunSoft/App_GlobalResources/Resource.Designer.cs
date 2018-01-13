@@ -196,6 +196,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, такую же, как Описание.
+        /// </summary>
+        internal static string descriptionAct {
+            get {
+                return ResourceManager.GetString("descriptionAct", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, такую же, как Email.
         /// </summary>
         internal static string email {
@@ -313,6 +322,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, такую же, как .
+        /// </summary>
+        internal static string myShopBag {
+            get {
+                return ResourceManager.GetString("myShopBag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, такую же, как Новый.
         /// </summary>
         internal static string neW {
@@ -372,6 +390,15 @@ namespace Resources {
         internal static string privacyPolicy {
             get {
                 return ResourceManager.GetString("privacyPolicy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Описание продукта.
+        /// </summary>
+        internal static string productDescription {
+            get {
+                return ResourceManager.GetString("productDescription", resourceCulture);
             }
         }
         
