@@ -288,4 +288,28 @@
   <data name="productDescription" xml:space="preserve">
     <value>Описание продукта</value>
   </data>
+  <data name="backToShopping" xml:space="preserve">
+    <value>Назад к покупкам</value>
+  </data>
+  <data name="myShopingBag" xml:space="preserve">
+    <value>Моя корзина</value>
+  </data>
+  <data name="price" xml:space="preserve">
+    <value>Цена</value>
+  </data>
+  <data name="product" xml:space="preserve">
+    <value>Продукт</value>
+  </data>
+  <data name="productName" xml:space="preserve">
+    <value>Имя продукта</value>
+  </data>
+  <data name="quantity" xml:space="preserve">
+    <value>Количество</value>
+  </data>
+  <data name="remove" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="shoppingBasket" xml:space="preserve">
+    <value>Корзина покупок</value>
+  </data>
 </root>

@@ -41,6 +41,11 @@
           <Property Name="DescriptionEs" Type="nvarchar(max)" />
           <Property Name="FrontImgUrl" Type="nvarchar(max)" />
           <Property Name="BackImgUrl" Type="nvarchar(max)" />
+          <Property Name="Img1" Type="nvarchar(max)" />
+          <Property Name="Img2" Type="nvarchar(max)" />
+          <Property Name="Img3" Type="nvarchar(max)" />
+          <Property Name="Img4" Type="nvarchar(max)" />
+          <Property Name="ImgCart" Type="nvarchar(max)" />
           <Property Name="Price" Type="float" />
           <Property Name="PriceOld" Type="float" />
           <Property Name="CategoryID" Type="int" />
@@ -184,6 +189,11 @@
           <Property Name="DescriptionEs" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="FrontImgUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="BackImgUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Img1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Img2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Img3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Img4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ImgCart" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Price" Type="Double" />
           <Property Name="PriceOld" Type="Double" />
           <Property Name="CategoryID" Type="Int32" />
@@ -231,7 +241,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -281,6 +291,11 @@
                 <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
                 <ScalarProperty Name="PriceOld" ColumnName="PriceOld" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="ImgCart" ColumnName="ImgCart" />
+                <ScalarProperty Name="Img4" ColumnName="Img4" />
+                <ScalarProperty Name="Img3" ColumnName="Img3" />
+                <ScalarProperty Name="Img2" ColumnName="Img2" />
+                <ScalarProperty Name="Img1" ColumnName="Img1" />
                 <ScalarProperty Name="BackImgUrl" ColumnName="BackImgUrl" />
                 <ScalarProperty Name="FrontImgUrl" ColumnName="FrontImgUrl" />
                 <ScalarProperty Name="DescriptionEs" ColumnName="DescriptionEs" />

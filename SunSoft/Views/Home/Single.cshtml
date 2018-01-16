@@ -21,7 +21,12 @@
                      UnitSymbol = u.Symbol,
                      IsNew = p.IsNew,
                      ImgFront = p.FrontImgUrl.Replace("~", ""),
-                     ImgBack = p.BackImgUrl.Replace("~", "")
+                     ImgBack = p.BackImgUrl.Replace("~", ""),
+                     Img1= p.Img1,
+                     Img2 = p.Img2,
+                     Img3 = p.Img3,
+                     Img4 = p.Img4,
+                     ImgCart = p.ImgCart
                  };
     var item = entity.Where(t => t.ID.ToString() == ID).FirstOrDefault();
 
@@ -53,18 +58,18 @@
                     </script>
                     <!-- //FlexSlider-->
                     <ul class="slides">
-                        <li data-thumb="/content/images/d2.jpg">
-                            <div class="thumb-image"> <img src="/content/images/d2.jpg" data-imagezoom="true" class="img-responsive"> </div>
+                        <li data-thumb="@item.Img2">
+                            <div class="thumb-image"> <img src="@item.Img2" data-imagezoom="true" class="img-responsive"> </div>
                         </li>
-                        <li data-thumb="/content/images/d1.jpg">
-                            <div class="thumb-image"> <img src="/content/images/d1.jpg" data-imagezoom="true" class="img-responsive"> </div>
+                        <li data-thumb="@item.Img1">
+                            <div class="thumb-image"> <img src="@item.Img1" data-imagezoom="true" class="img-responsive"> </div>
                         </li>
-                        <li data-thumb="/content/images/d3.jpg">
+                        @*<li data-thumb="/content/images/d3.jpg">
                             <div class="thumb-image"> <img src="/content/images/d3.jpg" data-imagezoom="true" class="img-responsive"> </div>
                         </li>
                         <li data-thumb="/content/images/d4.jpg">
                             <div class="thumb-image"> <img src="/content/images/d4.jpg" data-imagezoom="true" class="img-responsive"> </div>
-                        </li>
+                        </li>*@
                     </ul>
                     <div class="clearfix"></div>
                 </div>

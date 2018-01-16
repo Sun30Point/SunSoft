@@ -25,6 +25,11 @@ namespace SunSoft.Entity
         public string DescriptionEs { get; set; }
         public string FrontImgUrl { get; set; }
         public string BackImgUrl { get; set; }
+        public string Img1 { get; set; }
+        public string Img2 { get; set; }
+        public string Img3 { get; set; }
+        public string Img4 { get; set; }
+        public string ImgCart { get; set; }
         public Nullable<double> Price { get; set; }
         public Nullable<double> PriceOld { get; set; }
         public Nullable<int> CategoryID { get; set; }

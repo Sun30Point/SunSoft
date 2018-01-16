@@ -142,6 +142,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, такую же, как Назад к покупкам.
+        /// </summary>
+        internal static string backToShopping {
+            get {
+                return ResourceManager.GetString("backToShopping", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, такую же, как Войдя в систему, вы соглашаетесь с нашими.
         /// </summary>
         internal static string Bylogginginyouagreetoour {
@@ -331,6 +340,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, такую же, как Моя корзина.
+        /// </summary>
+        internal static string myShopingBag {
+            get {
+                return ResourceManager.GetString("myShopingBag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, такую же, как Новый.
         /// </summary>
         internal static string neW {
@@ -385,11 +403,29 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, такую же, как Цена.
+        /// </summary>
+        internal static string price {
+            get {
+                return ResourceManager.GetString("price", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, такую же, как политика конфиденциальности.
         /// </summary>
         internal static string privacyPolicy {
             get {
                 return ResourceManager.GetString("privacyPolicy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Продукт.
+        /// </summary>
+        internal static string product {
+            get {
+                return ResourceManager.GetString("product", resourceCulture);
             }
         }
         
@@ -403,11 +439,29 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, такую же, как Имя продукта.
+        /// </summary>
+        internal static string productName {
+            get {
+                return ResourceManager.GetString("productName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, такую же, как Системы програмирования.
         /// </summary>
         internal static string programmingSystems {
             get {
                 return ResourceManager.GetString("programmingSystems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Количество.
+        /// </summary>
+        internal static string quantity {
+            get {
+                return ResourceManager.GetString("quantity", resourceCulture);
             }
         }
         
@@ -435,6 +489,15 @@ namespace Resources {
         internal static string rememberMe {
             get {
                 return ResourceManager.GetString("rememberMe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Удалить.
+        /// </summary>
+        internal static string remove {
+            get {
+                return ResourceManager.GetString("remove", resourceCulture);
             }
         }
         
@@ -471,6 +534,15 @@ namespace Resources {
         internal static string serviceSystems {
             get {
                 return ResourceManager.GetString("serviceSystems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Корзина покупок.
+        /// </summary>
+        internal static string shoppingBasket {
+            get {
+                return ResourceManager.GetString("shoppingBasket", resourceCulture);
             }
         }
         
