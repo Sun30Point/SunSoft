@@ -9,6 +9,7 @@
 /// <reference path="../content/js/pignose.layerslider.js" />
 /// <reference path="../content/js/responsiveslides.min.js" />
 /// <reference path="../content/js/simplecart.min.js" />
+/// <reference path="../content/js/simplecart_custom.js" />
 /// <reference path="bootstrap.js" />
 /// <reference path="jquery.validate.js" />
 /// <reference path="jquery.validate.unobtrusive.js" />

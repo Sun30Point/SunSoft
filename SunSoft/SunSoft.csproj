@@ -373,6 +373,7 @@
     <Content Include="Content\js\pignose.layerslider.js" />
     <Content Include="Content\js\responsiveslides.min.js" />
     <Content Include="Content\js\simpleCart.min.js" />
+    <Content Include="Content\js\simpleCart_custom.js" />
     <Content Include="Entity\SunSoftDBModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>SunSoftDBModel.edmx</DependentUpon>
