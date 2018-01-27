@@ -20,7 +20,8 @@
                      UnitSymbol = u.Symbol,
                      IsNew = p.IsNew,
                      ImgFront=p.FrontImgUrl.Replace("~",""),
-                     ImgBack=p.BackImgUrl.Replace("~", "")
+                     ImgBack=p.BackImgUrl.Replace("~", ""),
+                     ImgCart=p.ImgCart.Replace("~", "")
                  };
     var entity_attlasian = entity.Where(t => t.VenderID == 2).ToList();
     var entity_jetbrains = entity.Where(t => t.VenderID == 5).ToList();
@@ -111,6 +112,7 @@
                                 <div class="men-thumb-item">
                                     <img src="@item.ImgFront" alt="" class="pro-image-front">
                                     <img src="@item.ImgBack" alt="" class="pro-image-back">
+                                    <img style="display:none" src="@item.ImgCart" alt="" class="item_image">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="~/home/single/@item.ID" class="link-product-add-cart">@Resources.Resource.quickView</a>
@@ -143,6 +145,7 @@
                                     <div class="men-thumb-item">
                                         <img src="@item.ImgFront" alt="" class="pro-image-front">
                                         <img src="@item.ImgBack" alt="" class="pro-image-back">
+                                        <img style="display:none" src="@item.ImgCart" alt="" class="item_image">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
                                                 <a href="~/home/single/@item.ID" class="link-product-add-cart">@Resources.Resource.quickView</a>
@@ -174,6 +177,7 @@
                                     <div class="men-thumb-item">
                                         <img src="@item.ImgFront" alt="" class="pro-image-front">
                                         <img src="@item.ImgBack" alt="" class="pro-image-back">
+                                        <img style="display:none" src="@item.ImgCart" alt="" class="item_image">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
                                                 <a href="~/home/single/@item.ID" class="link-product-add-cart">@Resources.Resource.quickView</a>
@@ -205,6 +209,8 @@
                                     <div class="men-thumb-item">
                                         <img src="@item.ImgFront" alt="" class="pro-image-front">
                                         <img src="@item.ImgBack" alt="" class="pro-image-back">
+                                        <img style="display:none" src="@item.ImgCart" alt="" class="item_image">
+                                        
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
                                                 <a href="~/home/single/@item.ID" class="link-product-add-cart">@Resources.Resource.quickView</a>

@@ -372,6 +372,7 @@
     <Content Include="Content\js\jquery.flexslider.js" />
     <Content Include="Content\js\pignose.layerslider.js" />
     <Content Include="Content\js\responsiveslides.min.js" />
+    <Content Include="Content\js\simpleCart.js" />
     <Content Include="Content\js\simpleCart.min.js" />
     <Content Include="Content\js\simpleCart_custom.js" />
     <Content Include="Entity\SunSoftDBModel.Context.tt">
