@@ -1,9 +1,14 @@
-﻿
+﻿<script src="~/Content/js/simpleCart_custom.js"></script>
 <div class="checkout">
     <div class="container">
         <h3>@Resources.Resource.myShopingBag</h3>
         <div class="table-responsive checkout-right animated wow slideInUp" data-wow-delay=".5s">
-            <table class="timetable_sub">
+            <input type="hidden" id="remove_hide_label" value="@Resources.Resource.remove" />
+            <input type="hidden" id="product_hide_label" value="@Resources.Resource.product" />
+            <input type="hidden" id="quantity_hide_label" value="@Resources.Resource.quantity" />
+            <input type="hidden" id="productName_hide_label" value="@Resources.Resource.productName" />
+            <input type="hidden" id="price_hide_label" value="@Resources.Resource.price" />
+            @*<table class="timetable_sub">
                 <thead>
                     <tr>
                         <th>@Resources.Resource.remove</th>
@@ -28,7 +33,7 @@ $(document).ready(function(c) {
 								});
                         </script>
                     </td>
-                    <td class="invert-image"><a href="single.html"><img src="~/content/images/w4.png" alt=" " class="img-responsive" /></a></td>
+                    <td class="invert-image"><a href="#"><img src="~/content/images/w4.png" alt=" " class="img-responsive" /></a></td>
                     <td class="invert">
                         <div class="quantity">
                             <div class="quantity-select">
@@ -142,26 +147,30 @@ $(document).ready(function(c) {
 									});
                 </script>
                 <!--quantity-->
-            </table>
+            </table>*@
         </div>
-        <div class="checkout-left">
+        <div class="simpleCart_items table-responsive checkout-right animated wow slideInUp" data-wow-delay=".5s">
+            
+            </div>
+            <div class="checkout-left">
 
-            <div class="checkout-right-basket animated wow slideInRight" data-wow-delay=".5s">
-                <a href="/home/index"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>@Resources.Resource.backToShopping</a>
+                <div class="checkout-right-basket animated wow slideInRight" data-wow-delay=".5s">
+                    <a href="/home/index"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>@Resources.Resource.backToShopping</a>
+                </div>
+                <div style="display:none" class="checkout-left-basket animated wow slideInLeft" data-wow-delay=".5s">
+                    <h4>@Resources.Resource.shoppingBasket</h4>
+                    <ul>
+                        <li>Hand Bag <i>-</i> <span>$45.99</span></li>
+                        <li>Watches <i>-</i> <span>$45.99</span></li>
+                        <li>Sandals <i>-</i> <span>$45.99</span></li>
+                        <li>Wedges <i>-</i> <span>$45.99</span></li>
+                        <li>Total <i>-</i> <span>$183.96</span></li>
+                    </ul>
+                </div>
+                <div class="clearfix"> </div>
             </div>
-            <div class="checkout-left-basket animated wow slideInLeft" data-wow-delay=".5s">
-                <h4>@Resources.Resource.shoppingBasket</h4>
-                <ul>
-                    <li>Hand Bag <i>-</i> <span>$45.99</span></li>
-                    <li>Watches <i>-</i> <span>$45.99</span></li>
-                    <li>Sandals <i>-</i> <span>$45.99</span></li>
-                    <li>Wedges <i>-</i> <span>$45.99</span></li>
-                    <li>Total <i>-</i> <span>$183.96</span></li>
-                </ul>
-            </div>
-            <div class="clearfix"> </div>
         </div>
-    </div>
 </div>
+<script src="~/Content/js/simpleCart_custom.js"></script>
 
 

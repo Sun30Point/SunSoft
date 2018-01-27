@@ -1697,7 +1697,8 @@
 						return simpleCart.quantity();
 					}
 					, items: function (selector) {
-						simpleCart.writeCart(selector);
+					    simpleCart.writeCart(selector);
+					    simpleCart.trigger("afterCreate");
 					}
 					, tax: function () {
 						return simpleCart.toCurrency(simpleCart.tax());

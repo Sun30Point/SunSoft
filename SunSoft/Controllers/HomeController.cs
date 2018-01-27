@@ -20,6 +20,14 @@ namespace SunSoft.Controllers
         {
             return View();
         }
+        public ActionResult Venders()
+        {
+            return View();
+        }
+        public ActionResult Categories()
+        {
+            return View();
+        }
 
         public ActionResult About()
         {

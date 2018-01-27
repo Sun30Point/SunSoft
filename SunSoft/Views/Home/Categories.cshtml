@@ -1,0 +1,82 @@
+﻿
+@using System.Linq;
+@{
+    string ID = Request.Url.Segments.Last();
+    SunSoft.Entity.SunSoftDBEntities db = new SunSoft.Entity.SunSoftDBEntities();
+    var entity = from p in db.Prices
+                 join c in db.Categories on p.CategoryID equals c.Id
+                 join v in db.Venders on p.VenderID equals v.Id
+                 join u in db.CurrencyUnits on p.CurrencyUnitID equals u.Id
+
+                 select new
+                 {
+                     ID = p.Id,
+                     Name = p.NameRu,
+                     Description = p.DescriptionRu,
+                     PriceNew = p.Price,
+                     PriceOld = p.PriceOld,
+                     Unit = u.NameRu,
+                     UnitID = u.Id,
+                     Vender = v.NameRu,
+                     VenderID = v.Id,
+                     CategoryID=c.Id,
+                     Category=c.NameRu,
+                     UnitSymbol = u.Symbol,
+                     IsNew = p.IsNew,
+                     ImgFront = p.FrontImgUrl.Replace("~", ""),
+                     ImgBack = p.BackImgUrl.Replace("~", ""),
+                     Img1 = p.Img1,
+                     Img2 = p.Img2,
+                     Img3 = p.Img3,
+                     Img4 = p.Img4,
+                     ImgCart = p.ImgCart
+                 };
+    var items = entity.Where(t => t.CategoryID.ToString() == ID);
+    var Category_name = items.FirstOrDefault() != null ? items.FirstOrDefault().Category : "";
+
+}
+
+<div class="page-head">
+    <div class="container">
+        <h3>@Category_name</h3>
+    </div>
+</div>
+<!-- //banner -->
+<!-- single -->
+<link rel="stylesheet" href="~/Content/css/flexslider.css" type="text/css" media="screen" />
+<script src="~/Content/js/jquery.flexslider.js"></script>
+<div class="product-easy">
+    <div class="container">
+        <div class="resp-tabs-container">
+
+            @foreach (var item in items)
+            {
+                <div class="col-md-3 product-men">
+                    <div class="men-pro-item simpleCart_shelfItem">
+                        <div class="men-thumb-item">
+                            <img src="@item.ImgFront" alt="" class="pro-image-front">
+                            <img src="@item.ImgBack" alt="" class="pro-image-back">
+                            <img style="display:none" src="@item.ImgCart" alt="" class="item_image">
+                            <label style="display:none" class="item_name">@item.Name</label>
+                            <div class="men-cart-pro">
+                                <div class="inner-men-cart-pro">
+                                    <a href="~/home/single/@item.ID" class="link-product-add-cart">@Resources.Resource.quickView</a>
+                                </div>
+                            </div>
+                            <span class="product-new-top">@((item.IsNew ?? false) ? Resources.Resource.neW : "")</span>
+
+                        </div>
+                        <div class="item-info-product ">
+                            <h4><a href="~/home/single/@item.ID">@item.Name</a></h4>
+                            <div class="info-product-price">
+                                <span class="item_price">@(item.UnitSymbol + item.PriceNew)</span>
+                                <del>@(item.UnitSymbol + item.PriceOld)</del>
+                            </div>
+                            <a href="#" class="item_add single-item hvr-outline-out button2">@Resources.Resource.addToCart</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
