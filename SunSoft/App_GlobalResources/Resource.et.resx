@@ -117,13 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="allDeleviry" xml:space="preserve">
-    <value>Free shipping On all orders</value>
+  <data name="addToCart" xml:space="preserve">
+    <value>Lisa ostukorvi</value>
   </data>
-  <data name="deleviry" xml:space="preserve">
-    <value>Free and Fast Delivery</value>
+  <data name="adobe" xml:space="preserve">
+    <value>Adobe</value>
   </data>
-  <data name="title" xml:space="preserve">
-    <value>SunPoint Software</value>
+  <data name="adress" xml:space="preserve">
+    <value>Адресс</value>
   </data>
 </root>
