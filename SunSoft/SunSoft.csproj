@@ -377,6 +377,8 @@
     <Content Include="Content\js\simpleCart.js" />
     <Content Include="Content\js\simpleCart.min.js" />
     <Content Include="Content\js\simpleCart_custom.js" />
+    <Content Include="Content\js\SimpleCart_customCheckOut.js" />
+    <Content Include="Content\js\SimpleCart_CustomClear.js" />
     <Content Include="Entity\SunSoftDBModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>SunSoftDBModel.edmx</DependentUpon>

@@ -170,7 +170,8 @@ $(document).ready(function(c) {
                 </div>
                 <div class="clearfix"> </div>
             </div>
-        <h3 class="tittle">@Resources.Resource.createPayment</h3>
+        @RenderPage("~/Views/SendMailer/CheckOutIndex.cshtml")
+        @*<h3 class="tittle">@Resources.Resource.createPayment</h3>
         <form id="createPaymentForm">
             <div class="contact-form2">
                 <input type="text" value="@Resources.Resource.firstName" onfocus="this.value = '';" onblur=" if (this.value= ='' ) { this.value='@Resources.Resource.firstName' ; }" required="">
@@ -180,7 +181,7 @@ $(document).ready(function(c) {
                 <textarea type="text" onfocus="this.value = '';" onblur="    if (this.value == '') { this.value = '@Resources.Resource.comment...'; }" required="">@Resources.Resource.comment...</textarea>
                 <input type="submit" value="@Resources.Resource.createPayment">
             </div>
-        </form>
+        </form>*@
         </div>
 </div>
 <script src="~/Content/js/simpleCart_custom.js"></script>

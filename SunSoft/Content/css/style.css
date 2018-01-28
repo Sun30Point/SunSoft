@@ -1724,7 +1724,7 @@ h3.tittle {
     width: 100%;
 	margin:25px 0;
 }
-.contact-form2 input[type="submit"]{
+.contact-form2 input[type="submit"],#createPaymentButton{
     outline: none;
     padding: 10px 0;
     border: none;
