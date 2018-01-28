@@ -1,4 +1,4 @@
-﻿<script src="~/Content/js/simpleCart_custom.js"></script>
+﻿
 <div class="checkout">
     <div class="container">
         <h3>@Resources.Resource.myShopingBag</h3>
@@ -152,6 +152,7 @@ $(document).ready(function(c) {
         <div class="simpleCart_items table-responsive checkout-right animated wow slideInUp" data-wow-delay=".5s">
             
             </div>
+       
             <div class="checkout-left">
 
                 <div class="checkout-right-basket animated wow slideInRight" data-wow-delay=".5s">
@@ -169,6 +170,17 @@ $(document).ready(function(c) {
                 </div>
                 <div class="clearfix"> </div>
             </div>
+        <h3 class="tittle">@Resources.Resource.createPayment</h3>
+        <form id="createPaymentForm">
+            <div class="contact-form2">
+                <input type="text" value="@Resources.Resource.firstName" onfocus="this.value = '';" onblur=" if (this.value= ='' ) { this.value='@Resources.Resource.firstName' ; }" required="">
+                <input type="text" value="@Resources.Resource.name" onfocus="this.value = '';" onblur=" if (this.value= ='' ) { this.value='@Resources.Resource.name' ; }" required="">
+                <input type="email" value="@Resources.Resource.email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '@Resources.Resource.email';}" required="">
+                <input type="text" value="@Resources.Resource.phone" onfocus="this.value = '';" onblur=" if (this.value= ='' ) { this.value='@Resources.Resource.phone' ; }" required="">
+                <textarea type="text" onfocus="this.value = '';" onblur="    if (this.value == '') { this.value = '@Resources.Resource.comment...'; }" required="">@Resources.Resource.comment...</textarea>
+                <input type="submit" value="@Resources.Resource.createPayment">
+            </div>
+        </form>
         </div>
 </div>
 <script src="~/Content/js/simpleCart_custom.js"></script>

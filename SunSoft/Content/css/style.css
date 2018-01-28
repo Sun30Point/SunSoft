@@ -1714,7 +1714,7 @@ h3.tittle {
     width: 49%;	
 }
 .contact-form2 input[type="email"]{
-	margin-left:1.5%;
+	/*margin-left:1.5%;*/
 }
 .contact-form2 input[type="text"]:hover,.contact-form2 input[type="email"]:hover,.contact-form2 textarea:hover{
     border: 1px solid #FDA30E;	

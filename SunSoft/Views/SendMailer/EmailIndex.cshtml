@@ -1,0 +1,10 @@
+﻿@model SunSoft.Models.MailModel
+@using (Html.BeginForm("EmailIndex", "SendMailer", FormMethod.Post, new { id = "formid" }))
+{
+    @Html.TextBoxFor(m => m.Email, new { placeholder = Resources.Resource.email, required="", onlur = "if (this.value == '') {this.value = '"+Resources.Resource.email+"';}", onfocus= "this.value = '';",@name = "email" })
+    
+    <input type="submit" value="@Resources.Resource.submit">
+   
+   
+
+}

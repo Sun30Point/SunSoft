@@ -23,7 +23,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
     <!-- //pignose css -->
-    <link href="~/Content/css/style.css?v=33111" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/Content/css/style.css?v=7733111" rel="stylesheet" type="text/css" media="all" />
     <!-- js -->
     <script type="text/javascript" src="~/Content/js/jquery-2.1.4.min.js"></script>
     <!-- //js -->
@@ -75,14 +75,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
             <div class="col-md-3 header-right footer-bottom">
                 <ul>
-                    <li>
+                    @*<li>
                         <a href="#" class="use1" data-toggle="modal" data-target="#myModal4"><span>@Resources.Resource.login</span></a>
 
                     </li>
                     <li><a class="fb" href="#"></a></li>
                     <li><a class="twi" href="#"></a></li>
                     <li><a class="insta" href="#"></a></li>
-                    <li><a class="you" href="#"></a></li>
+                    <li><a class="you" href="#"></a></li>*@
                 </ul>
             </div>
             <div class="clearfix"></div>
@@ -205,10 +205,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <h3>@Resources.Resource.subscription</h3>
                 </div>
                 <div class="col-sm-6 newsright">
-                    <form>
-                        <input type="text" value="@Resources.Resource.email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '@Resources.Resource.email';}" required="">
-                        <input type="submit" value="@Resources.Resource.submit">
-                    </form>
+                    @RenderPage("~/Views/SendMailer/EmailIndex.cshtml")
                 </div>
                 <div class="clearfix"></div>
                 <div class="sign-grds">

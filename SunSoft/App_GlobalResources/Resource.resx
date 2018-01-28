@@ -312,4 +312,19 @@
   <data name="shoppingBasket" xml:space="preserve">
     <value>Корзина покупок</value>
   </data>
+  <data name="successSend" xml:space="preserve">
+    <value>Спасибо ваш заказ, ваш заказ успешно отправлен! Ожидайте звонка менеджера!</value>
+  </data>
+  <data name="comment" xml:space="preserve">
+    <value>Коментарий</value>
+  </data>
+  <data name="createPayment" xml:space="preserve">
+    <value>Оформить заказ</value>
+  </data>
+  <data name="firstName" xml:space="preserve">
+    <value>Фамилия</value>
+  </data>
+  <data name="name" xml:space="preserve">
+    <value>Имя</value>
+  </data>
 </root>

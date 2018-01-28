@@ -169,11 +169,29 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, такую же, как Коментарий.
+        /// </summary>
+        internal static string comment {
+            get {
+                return ResourceManager.GetString("comment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, такую же, как Контактная информация.
         /// </summary>
         internal static string contactInfo {
             get {
                 return ResourceManager.GetString("contactInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Оформить заказ.
+        /// </summary>
+        internal static string createPayment {
+            get {
+                return ResourceManager.GetString("createPayment", resourceCulture);
             }
         }
         
@@ -255,6 +273,15 @@ namespace Resources {
         internal static string esset {
             get {
                 return ResourceManager.GetString("esset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Фамилия.
+        /// </summary>
+        internal static string firstName {
+            get {
+                return ResourceManager.GetString("firstName", resourceCulture);
             }
         }
         
@@ -345,6 +372,15 @@ namespace Resources {
         internal static string myShopingBag {
             get {
                 return ResourceManager.GetString("myShopingBag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Имя.
+        /// </summary>
+        internal static string name {
+            get {
+                return ResourceManager.GetString("name", resourceCulture);
             }
         }
         
@@ -597,6 +633,15 @@ namespace Resources {
         internal static string subscription {
             get {
                 return ResourceManager.GetString("subscription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Спасибо ваш заказ, ваш заказ успешно отправлен! Ожидайте звонка менеджера!.
+        /// </summary>
+        internal static string successSend {
+            get {
+                return ResourceManager.GetString("successSend", resourceCulture);
             }
         }
         
