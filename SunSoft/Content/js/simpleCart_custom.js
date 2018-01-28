@@ -16,7 +16,7 @@ simpleCart({
         
         {
             view: function (item, column) {
-                return "<a href=\"#\"><img class=\"img-responsive\" src='" + item.get('image') + "'></a>";
+                return "<a href=\"" + item.get('link') + "\"><img class=\"img-responsive\" src='" + item.get('image') + "'></a>";
             },
             attr: 'image',
             label: $('#product_hide_label').val()
