@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -269,6 +270,7 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\images\1.png" />
     <Content Include="Content\images\2.png" />
+    <Content Include="Content\images\3_20170112_9070.jpg" />
     <Content Include="Content\images\a1.png" />
     <Content Include="Content\images\a2.png" />
     <Content Include="Content\images\a3.png" />
