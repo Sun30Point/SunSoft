@@ -1,17 +1,48 @@
-﻿
-@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Contacts</title>
-</head>
-<body>
-    <div> 
+﻿<div class="page-head">
+    <div class="container">
+        <h3>@Resources.Resource.contacts</h3>
     </div>
-</body>
-</html>
+</div>
+<!-- //banner -->
+<!-- contact -->
+<div class="contact">
+    <div class="container">
+        <div class="contact-grids">
+            <div class="col-md-4 contact-grid text-center animated wow slideInLeft" data-wow-delay=".5s">
+                <div class="contact-grid1">
+                    <i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>
+                    <h4>@Resources.Resource.adress</h4>
+                    <p>@Resources.Resource.adressActual <span>@Resources.Resource.phone : @Resources.Resource.phoneActual</span></p>
+                </div>
+            </div>
+            <div class="col-md-4 contact-grid text-center animated wow slideInUp" data-wow-delay=".5s">
+                <div class="contact-grid2">
+                    <i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>
+                    <h4>@Resources.Resource.informationOfDelevery</h4>
+                    <p><span>@Resources.Resource.informationOfDeleveryActual</span></p>
+                </div>
+            </div>
+            <div class="col-md-4 contact-grid text-center animated wow slideInRight" data-wow-delay=".5s">
+                <div class="contact-grid3">
+                    <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
+                    <h4>@Resources.Resource.email</h4>
+                    <p><a href="mailto:@Resources.Resource.emailActual">@Resources.Resource.emailActual</a></p>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="map wow fadeInDown animated" data-wow-delay=".5s">
+            <h3 class="tittle">@Resources.Resource.viewOnMap</h3>
+            <iframe src="http://maps.google.com/maps?q=loc:50.460815,30.370413&hl=es;z=14&amp;output=embed" frameborder="0" style="border:0"></iframe>
+        </div>
+        <h3 class="tittle">@Resources.Resource.contactForm</h3>
+        <form>
+            <div class="contact-form2">
+                <input type="text" value="@Resources.Resource.name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '@Resources.Resource.name';}" required="">
+                <input type="email" value="@Resources.Resource.email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '@Resources.Resource.email';}" required="">
+                <textarea type="text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '@Resources.Resource.message...';}" required="">@Resources.Resource.message...</textarea>
+                <input type="submit" value="@Resources.Resource.send">
+            </div>
+        </form>
+    </div>
+</div>

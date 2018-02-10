@@ -196,7 +196,7 @@
     <value>Категории</value>
   </data>
   <data name="description" xml:space="preserve">
-    <value>Программного обеспечения ведущих производителей по справедливым и гибким ценам для домашнего пользователя для крупных предприятий.</value>
+    <value>Интернет магазин SunSoft.com.ua предлагает широкий ассортимент программного обеспечения ведущих производителей по справедливым и гибким ценам, как для домашнего пользователя, так и для крупных предприятий.</value>
   </data>
   <data name="emptyCart" xml:space="preserve">
     <value>Пустая корзина</value>
@@ -326,5 +326,26 @@
   </data>
   <data name="name" xml:space="preserve">
     <value>Имя</value>
+  </data>
+  <data name="contactForm" xml:space="preserve">
+    <value>Форма для запроса</value>
+  </data>
+  <data name="contacts" xml:space="preserve">
+    <value>Контакты</value>
+  </data>
+  <data name="informationOfDelevery" xml:space="preserve">
+    <value>Информация о доставке</value>
+  </data>
+  <data name="informationOfDeleveryActual" xml:space="preserve">
+    <value>Доставка Новой почтой,  электронные ключи, по Киеву осуществляеться доставка курьером.</value>
+  </data>
+  <data name="message" xml:space="preserve">
+    <value>Сообщение</value>
+  </data>
+  <data name="send" xml:space="preserve">
+    <value>Отправить</value>
+  </data>
+  <data name="viewOnMap" xml:space="preserve">
+    <value>Посмотреть на карте</value>
   </data>
 </root>

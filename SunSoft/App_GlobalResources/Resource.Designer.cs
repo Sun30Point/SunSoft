@@ -19,7 +19,7 @@ namespace Resources {
     // класс с помощью такого средства, как ResGen или Visual Studio.
     // Чтобы добавить или удалить элемент, измените файл .ResX и снова запустите ResGen
     // с параметром /str или перестройте проект Visual Studio.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Web.Application.StronglyTypedResourceProxyBuilder", "14.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Web.Application.StronglyTypedResourceProxyBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resource {
@@ -178,11 +178,29 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, такую же, как Форма для запроса.
+        /// </summary>
+        internal static string contactForm {
+            get {
+                return ResourceManager.GetString("contactForm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, такую же, как Контактная информация.
         /// </summary>
         internal static string contactInfo {
             get {
                 return ResourceManager.GetString("contactInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Контакты.
+        /// </summary>
+        internal static string contacts {
+            get {
+                return ResourceManager.GetString("contacts", resourceCulture);
             }
         }
         
@@ -214,7 +232,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, такую же, как Программного обеспечения ведущих производителей по справедливым и гибким ценам для домашнего пользователя для крупных предприятий..
+        ///   Ищет локализованную строку, такую же, как Интернет магазин SunSoft.com.ua предлагает широкий ассортимент программного обеспечения ведущих производителей по справедливым и гибким ценам, как для домашнего пользователя, так и для крупных предприятий..
         /// </summary>
         internal static string description {
             get {
@@ -313,6 +331,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, такую же, как Информация о доставке.
+        /// </summary>
+        internal static string informationOfDelevery {
+            get {
+                return ResourceManager.GetString("informationOfDelevery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Доставка Новой почтой,  электронные ключи, по Киеву осуществляеться доставка курьером..
+        /// </summary>
+        internal static string informationOfDeleveryActual {
+            get {
+                return ResourceManager.GetString("informationOfDeleveryActual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, такую же, как элементов.
         /// </summary>
         internal static string items {
@@ -345,6 +381,15 @@ namespace Resources {
         internal static string mcaffee {
             get {
                 return ResourceManager.GetString("mcaffee", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Сообщение.
+        /// </summary>
+        internal static string message {
+            get {
+                return ResourceManager.GetString("message", resourceCulture);
             }
         }
         
@@ -565,6 +610,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, такую же, как Отправить.
+        /// </summary>
+        internal static string send {
+            get {
+                return ResourceManager.GetString("send", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, такую же, как Сервисные системы.
         /// </summary>
         internal static string serviceSystems {
@@ -678,6 +732,15 @@ namespace Resources {
         internal static string venders {
             get {
                 return ResourceManager.GetString("venders", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Посмотреть на карте.
+        /// </summary>
+        internal static string viewOnMap {
+            get {
+                return ResourceManager.GetString("viewOnMap", resourceCulture);
             }
         }
         

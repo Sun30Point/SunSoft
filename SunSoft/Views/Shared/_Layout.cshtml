@@ -138,33 +138,33 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             <div class="col-sm-3 multi-gd-img">
                                                 <ul class="multi-column-dropdown">
                                                     @foreach (var item in venders)
-                                                    {
-                                                        /**/
-                                                        if (item.ID < (venders.Count() / 2 + 1))
-                                                        {
-                                                            <li><a href="/home/venders/@item.ID">@item.Name</a></li>
-                                                        }
-                                                    }
+                        {
+                            /**/
+                            if (item.ID < (venders.Count() / 2 + 1))
+                            {
+                                <li><a href="/home/venders/@item.ID">@item.Name</a></li>
+}
+}
                                                     @*<li><a href="/home/venders/1">@Resources.Resource.adobe</a></li>
-                                                        <li><a href="/home/venders/2">@Resources.Resource.atlassian</a></li>
-                                                        <li><a href="/home/venders/3">@Resources.Resource.avast</a></li>
-                                                        <li><a href="/home/venders/4">@Resources.Resource.esset</a></li>*@
+                            <li><a href="/home/venders/2">@Resources.Resource.atlassian</a></li>
+                            <li><a href="/home/venders/3">@Resources.Resource.avast</a></li>
+                            <li><a href="/home/venders/4">@Resources.Resource.esset</a></li>*@
                                                 </ul>
                                             </div>
                                             <div class="col-sm-3 multi-gd-img">
                                                 <ul class="multi-column-dropdown">
                                                     @foreach (var item in venders)
-                                                    {
-                                                        /**/
-                                                        if (item.ID >= (venders.Count() / 2 + 1))
-                                                        {
-                                                            <li><a href="/home/venders/@item.ID">@item.Name</a></li>
-                                                        }
-                                                    }
+                        {
+                            /**/
+                            if (item.ID >= (venders.Count() / 2 + 1))
+                            {
+                                <li><a href="/home/venders/@item.ID">@item.Name</a></li>
+}
+}
                                                     @*<li><a href="/home/venders/9">@Resources.Resource.mcaffee</a></li>
-                                                        <li><a href="/home/venders/6">@Resources.Resource.microsoft</a></li>
-                                                        <li><a href="/home/venders/7">@Resources.Resource.sketchUp</a></li>
-                                                        <li><a href="/home/venders/8">@Resources.Resource.zwsoft</a></li>*@
+                            <li><a href="/home/venders/6">@Resources.Resource.microsoft</a></li>
+                            <li><a href="/home/venders/7">@Resources.Resource.sketchUp</a></li>
+                            <li><a href="/home/venders/8">@Resources.Resource.zwsoft</a></li>*@
                                                 </ul>
                                             </div>
                                             <div class="clearfix"></div>
@@ -178,32 +178,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             <div class="col-sm-3 multi-gd-img">
                                                 <ul class="multi-column-dropdown">
                                                     @foreach (var item in categories)
-                                                    {
-                                                        /**/
-                                                        if (item.ID < (categories.Count() / 2 + 1))
-                                                        {
-                                                            <li><a href="/home/categories/@item.ID">@item.Name</a></li>
-                                                        }
-                                                    }
+                        {
+                            /**/
+                            if (item.ID < (categories.Count() / 2 + 1))
+                            {
+                                <li><a href="/home/categories/@item.ID">@item.Name</a></li>
+}
+}
                                                     @*<li><a href="/home/categories/2">@Resources.Resource.os</a></li>
-                                                        <li><a href="/home/categories/4">@Resources.Resource.serviceSystems</a></li>
-                                                        <li><a href="/home/categories/6">@Resources.Resource.DBMS</a></li>
-                                                        <li><a href="/home/categories/5">@Resources.Resource.textEditors</a></li>*@
+                            <li><a href="/home/categories/4">@Resources.Resource.serviceSystems</a></li>
+                            <li><a href="/home/categories/6">@Resources.Resource.DBMS</a></li>
+                            <li><a href="/home/categories/5">@Resources.Resource.textEditors</a></li>*@
                                                 </ul>
                                             </div>
                                             <div class="col-sm-3 multi-gd-img">
                                                 <ul class="multi-column-dropdown">
                                                     @foreach (var item in categories)
-                                                    {
-                                                        /**/
-                                                        if (item.ID >= (categories.Count() / 2 + 1))
-                                                        {
-                                                            <li><a href="/home/categories/@item.ID">@item.Name</a></li>
-                                                        }
-                                                    }
+                        {
+                            /**/
+                            if (item.ID >= (categories.Count() / 2 + 1))
+                            {
+                                <li><a href="/home/categories/@item.ID">@item.Name</a></li>
+}
+}
                                                     @*<li><a href="/home/categories/1">@Resources.Resource.officeSystems</a></li>
-                                                    <li><a href="/home/categories/7">@Resources.Resource.engineering</a></li>
-                                                    <li><a href="/home/categories/3">@Resources.Resource.programmingSystems</a></li>*@
+                            <li><a href="/home/categories/7">@Resources.Resource.engineering</a></li>
+                            <li><a href="/home/categories/3">@Resources.Resource.programmingSystems</a></li>*@
 
                                                 </ul>
                                             </div>
@@ -215,8 +215,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     </ul>
                                 </li>
                                 @*<li class=" menu__item"><a class="menu__link" href="electronics.html">Electronics</a></li>
-                                    <li class=" menu__item"><a class="menu__link" href="codes.html">Short Codes</a></li>
-                                    <li class=" menu__item"><a class="menu__link" href="contact.html">contact</a></li>*@
+        <li class=" menu__item"><a class="menu__link" href="codes.html">Short Codes</a></li>>*@
+                                <li class=" menu__item"><a class="menu__link" href="/home/contacts">@Resources.Resource.contacts</a></li>
                             </ul>
                         </div>
                     </div>

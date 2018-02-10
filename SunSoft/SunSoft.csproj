@@ -510,6 +510,7 @@
     <Content Include="Views\SendMailer\SuccessSend.cshtml" />
     <Content Include="Views\SendMailer\CheckOutIndex.cshtml" />
     <Content Include="Views\Home\Contacts.cshtml" />
+    <Content Include="Views\SendMailer\SendEmailIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
