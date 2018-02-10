@@ -1,12 +1,32 @@
-﻿<!DOCTYPE html>
+﻿@using System.Linq;
+@{
+
+    SunSoft.Entity.SunSoftDBEntities db = new SunSoft.Entity.SunSoftDBEntities();
+    var venders = from v in db.Venders
+                  select new
+                  {
+                      ID = v.Id,
+                      Name = v.NameRu
+
+                  };
+    var categories = from v in db.Categories
+                     select new
+                     {
+                         ID = v.Id,
+                         Name = v.NameRu
+
+                     };
+
+}
+<!DOCTYPE html>
 <html>
 <head>
-@*<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title – приложение ASP.NET</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")*@
+    @*<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewBag.Title – приложение ASP.NET</title>
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
     <title>@Resources.Resource.title</title>
     <!-- for-mobile-apps -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -76,13 +96,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="col-md-3 header-right footer-bottom">
                 <ul>
                     @*<li>
-                        <a href="#" class="use1" data-toggle="modal" data-target="#myModal4"><span>@Resources.Resource.login</span></a>
+                            <a href="#" class="use1" data-toggle="modal" data-target="#myModal4"><span>@Resources.Resource.login</span></a>
 
-                    </li>
-                    <li><a class="fb" href="#"></a></li>
-                    <li><a class="twi" href="#"></a></li>
-                    <li><a class="insta" href="#"></a></li>
-                    <li><a class="you" href="#"></a></li>*@
+                        </li>
+                        <li><a class="fb" href="#"></a></li>
+                        <li><a class="twi" href="#"></a></li>
+                        <li><a class="insta" href="#"></a></li>
+                        <li><a class="you" href="#"></a></li>*@
                 </ul>
             </div>
             <div class="clearfix"></div>
@@ -117,19 +137,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             </div>
                                             <div class="col-sm-3 multi-gd-img">
                                                 <ul class="multi-column-dropdown">
-                                                    <li><a href="/home/venders/1">@Resources.Resource.adobe</a></li>
-                                                    <li><a href="/home/venders/2">@Resources.Resource.atlassian</a></li>
-                                                    <li><a href="/home/venders/3">@Resources.Resource.avast</a></li>
-                                                    <li><a href="/home/venders/4">@Resources.Resource.esset</a></li>
+                                                    @foreach (var item in venders)
+                                                    {
+                                                        /**/
+                                                        if (item.ID < (venders.Count() / 2 + 1))
+                                                        {
+                                                            <li><a href="/home/venders/@item.ID">@item.Name</a></li>
+                                                        }
+                                                    }
+                                                    @*<li><a href="/home/venders/1">@Resources.Resource.adobe</a></li>
+                                                        <li><a href="/home/venders/2">@Resources.Resource.atlassian</a></li>
+                                                        <li><a href="/home/venders/3">@Resources.Resource.avast</a></li>
+                                                        <li><a href="/home/venders/4">@Resources.Resource.esset</a></li>*@
                                                 </ul>
                                             </div>
                                             <div class="col-sm-3 multi-gd-img">
                                                 <ul class="multi-column-dropdown">
-                                                   
-                                                    <li><a href="/home/venders/9">@Resources.Resource.mcaffee</a></li>
-                                                    <li><a href="/home/venders/6">@Resources.Resource.microsoft</a></li>
-                                                    <li><a href="/home/venders/7">@Resources.Resource.sketchUp</a></li>
-                                                    <li><a href="/home/venders/8">@Resources.Resource.zwsoft</a></li>
+                                                    @foreach (var item in venders)
+                                                    {
+                                                        /**/
+                                                        if (item.ID >= (venders.Count() / 2 + 1))
+                                                        {
+                                                            <li><a href="/home/venders/@item.ID">@item.Name</a></li>
+                                                        }
+                                                    }
+                                                    @*<li><a href="/home/venders/9">@Resources.Resource.mcaffee</a></li>
+                                                        <li><a href="/home/venders/6">@Resources.Resource.microsoft</a></li>
+                                                        <li><a href="/home/venders/7">@Resources.Resource.sketchUp</a></li>
+                                                        <li><a href="/home/venders/8">@Resources.Resource.zwsoft</a></li>*@
                                                 </ul>
                                             </div>
                                             <div class="clearfix"></div>
@@ -142,18 +177,33 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         <div class="row">
                                             <div class="col-sm-3 multi-gd-img">
                                                 <ul class="multi-column-dropdown">
-                                                    <li><a href="/home/categories/2">@Resources.Resource.os</a></li>
-                                                    <li><a href="/home/categories/4">@Resources.Resource.serviceSystems</a></li>
-                                                    <li><a href="/home/categories/6">@Resources.Resource.DBMS</a></li>
-                                                    <li><a href="/home/categories/5">@Resources.Resource.textEditors</a></li>
+                                                    @foreach (var item in categories)
+                                                    {
+                                                        /**/
+                                                        if (item.ID < (categories.Count() / 2 + 1))
+                                                        {
+                                                            <li><a href="/home/categories/@item.ID">@item.Name</a></li>
+                                                        }
+                                                    }
+                                                    @*<li><a href="/home/categories/2">@Resources.Resource.os</a></li>
+                                                        <li><a href="/home/categories/4">@Resources.Resource.serviceSystems</a></li>
+                                                        <li><a href="/home/categories/6">@Resources.Resource.DBMS</a></li>
+                                                        <li><a href="/home/categories/5">@Resources.Resource.textEditors</a></li>*@
                                                 </ul>
                                             </div>
                                             <div class="col-sm-3 multi-gd-img">
                                                 <ul class="multi-column-dropdown">
-                                                    
-                                                    <li><a href="/home/categories/1">@Resources.Resource.officeSystems</a></li>
+                                                    @foreach (var item in categories)
+                                                    {
+                                                        /**/
+                                                        if (item.ID >= (categories.Count() / 2 + 1))
+                                                        {
+                                                            <li><a href="/home/categories/@item.ID">@item.Name</a></li>
+                                                        }
+                                                    }
+                                                    @*<li><a href="/home/categories/1">@Resources.Resource.officeSystems</a></li>
                                                     <li><a href="/home/categories/7">@Resources.Resource.engineering</a></li>
-                                                    <li><a href="/home/categories/3">@Resources.Resource.programmingSystems</a></li>
+                                                    <li><a href="/home/categories/3">@Resources.Resource.programmingSystems</a></li>*@
 
                                                 </ul>
                                             </div>
@@ -165,8 +215,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     </ul>
                                 </li>
                                 @*<li class=" menu__item"><a class="menu__link" href="electronics.html">Electronics</a></li>
-                                <li class=" menu__item"><a class="menu__link" href="codes.html">Short Codes</a></li>
-                                <li class=" menu__item"><a class="menu__link" href="contact.html">contact</a></li>*@
+                                    <li class=" menu__item"><a class="menu__link" href="codes.html">Short Codes</a></li>
+                                    <li class=" menu__item"><a class="menu__link" href="contact.html">contact</a></li>*@
                             </ul>
                         </div>
                     </div>
@@ -191,13 +241,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
     </div>
     <!-- //banner-top -->
-        @RenderBody()
+    @RenderBody()
     <!-- footer -->
     <div class="footer">
         <div class="container">
             <div class="col-md-3 footer-left">
                 <h2><a href="/home/index"><img src="~/Content/images/logoS.jpg" alt=" " /></a></h2>
-                <p>@Resources.Resource.description
+                <p>
+                    @Resources.Resource.description
                 </p>
             </div>
             <div class="col-md-9 footer-right">
@@ -226,7 +277,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>@Resources.Resource.phone : @Resources.Resource.phoneActual</li>
                         </ul>
                     </div>
-                    
+
                     <div class="clearfix"></div>
                 </div>
             </div>
