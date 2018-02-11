@@ -700,6 +700,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, такую же, как Спасибо за ваше обращение! Мы постараемся ответить на ваш запрос в самое ближайшее время!.
+        /// </summary>
+        internal static string successSendEmail {
+            get {
+                return ResourceManager.GetString("successSendEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, такую же, как Условия и положения.
         /// </summary>
         internal static string TermsAndConditions {

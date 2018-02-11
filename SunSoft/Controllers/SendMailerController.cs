@@ -19,7 +19,15 @@ namespace SunSoft.Controllers
         {
             return View();
         }
+        public ActionResult SuccessSendEmail()
+        {
+            return View();
+        }
         public ActionResult CheckOutIndex()
+        {
+            return View();
+        }
+        public ActionResult SendEmailIndex()
         {
             return View();
         }
@@ -74,6 +82,33 @@ namespace SunSoft.Controllers
             else
             {
                 return View("~/Views/SendMailer/SuccessSend.cshtml");
+            }
+        }
+        [HttpPost/*, ValidateInput(false)*/]
+        public ViewResult SendEmailIndex(MailModel _objModelMail)
+        {
+            if (ModelState.IsValid)
+            {
+                MailMessage mail = new MailMessage();
+                mail.To.Add("sun30point@gmail.com");
+                mail.From = new MailAddress(_objModelMail.Email);
+                mail.Subject = "Request for " + _objModelMail.Name + "(" + _objModelMail.Email + ")";
+                string Body = _objModelMail.Message;
+                mail.Body = Body;
+                mail.IsBodyHtml = true;
+                SmtpClient smtp = new SmtpClient();
+                smtp.Host = "smtp.gmail.com";
+                smtp.Port = 587;
+                smtp.UseDefaultCredentials = false;
+                smtp.Credentials = new System.Net.NetworkCredential("LtopMessage@gmail.com", "LtopSunPoint2017"); // Enter seders User name and password  
+                smtp.EnableSsl = true;
+                smtp.Send(mail);
+               
+                return View("~/Views/SendMailer/SuccessSendEmail.cshtml");
+            }
+            else
+            {
+                return View("~/Views/SendMailer/SuccessSendEmail.cshtml");
             }
         }
     }

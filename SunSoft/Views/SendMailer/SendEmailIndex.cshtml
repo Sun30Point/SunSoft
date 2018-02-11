@@ -1,20 +1,16 @@
 ﻿@model SunSoft.Models.MailModel
-<script src="~/Content/js/SimpleCart_customCheckOut.js"></script>
-<h3 class="tittle">@Resources.Resource.createPayment</h3>
-@using (Html.BeginForm("CheckOutIndex", "SendMailer", FormMethod.Post, new { id = "createPaymentForm" }))
+@using (Html.BeginForm("SendEmailIndex", "SendMailer", FormMethod.Post, new { id = "sendEmailForm" }))
 {
+    <h3 class="tittle">@Resources.Resource.contactForm</h3>
     <div class="contact-form2">
         @Html.ValidationSummary()
-        @Html.TextBoxFor(m => m.FirstName, new { placeholder = Resources.Resource.firstName, required = "", onlur = "if (this.value == '') {this.value = '" + Resources.Resource.firstName + "';}", onfocus = "this.value = '';", @name = "firstName" })
         @Html.TextBoxFor(m => m.Name, new { placeholder = Resources.Resource.name, required = "", onlur = "if (this.value == '') {this.value = '" + Resources.Resource.name + "';}", onfocus = "this.value = '';", @name = "name" })
         @Html.TextBoxFor(m => m.Email, new { placeholder = Resources.Resource.email, required = "", onlur = "if (this.value == '') {this.value = '" + Resources.Resource.email + "';}", onfocus = "this.value = '';", @name = "email" })
-        @Html.TextBoxFor(m => m.Phone, new { placeholder = Resources.Resource.phone, required = "", onlur = "if (this.value == '') {this.value = '" + Resources.Resource.phone + "';}", onfocus = "this.value = '';", @name = "phone" })
-        @Html.TextAreaFor(m => m.Message, new { placeholder = Resources.Resource.comment+"...",style= "display:none;", required = "", onlur = "if (this.value == '') {this.value = '" + @Resources.Resource.comment + "...';}", onfocus = "this.value = '';", @name = "message" })
-        <textarea type="text" id="PreComment_CheckOut" onfocus="this.value = '';" onblur=" if (this.value= ='' ) { this.value='@Resources.Resource.comment...' ; }" required="">@Resources.Resource.comment...</textarea>
-        <input style="display:none;" id="createPaymentSubmit" type="submit" value="@Resources.Resource.createPayment">
-        <input id="createPaymentButton"  type="button" value="@Resources.Resource.createPayment">
+        @Html.TextAreaFor(m => m.Message, new { placeholder = Resources.Resource.message + "...", required = "", onlur = "if (this.value == '') {this.value = '" + @Resources.Resource.message + "...';}", onfocus = "this.value = '';", @name = "message" })
+        <input type="submit" value="@Resources.Resource.send">
     </div>
+     
 }
-    
+
 
 

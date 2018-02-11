@@ -35,14 +35,6 @@
             <h3 class="tittle">@Resources.Resource.viewOnMap</h3>
             <iframe src="http://maps.google.com/maps?q=loc:50.460815,30.370413&hl=es;z=14&amp;output=embed" frameborder="0" style="border:0"></iframe>
         </div>
-        <h3 class="tittle">@Resources.Resource.contactForm</h3>
-        <form>
-            <div class="contact-form2">
-                <input type="text" value="@Resources.Resource.name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '@Resources.Resource.name';}" required="">
-                <input type="email" value="@Resources.Resource.email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '@Resources.Resource.email';}" required="">
-                <textarea type="text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '@Resources.Resource.message...';}" required="">@Resources.Resource.message...</textarea>
-                <input type="submit" value="@Resources.Resource.send">
-            </div>
-        </form>
+        @RenderPage("~/Views/SendMailer/SendEmailIndex.cshtml")
     </div>
 </div>

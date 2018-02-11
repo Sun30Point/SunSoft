@@ -345,6 +345,9 @@
   <data name="send" xml:space="preserve">
     <value>Отправить</value>
   </data>
+  <data name="successSendEmail" xml:space="preserve">
+    <value>Спасибо за ваше обращение! Мы постараемся ответить на ваш запрос в самое ближайшее время!</value>
+  </data>
   <data name="viewOnMap" xml:space="preserve">
     <value>Посмотреть на карте</value>
   </data>

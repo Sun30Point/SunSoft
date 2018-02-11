@@ -1,19 +1,19 @@
 ﻿@using System.Linq;
 @{
 
-    SunSoft.Entity.SunSoftDBEntities db = new SunSoft.Entity.SunSoftDBEntities();
-    var venders = from v in db.Venders
+    SunSoft.Entity.SunSoftDBEntities db1 = new SunSoft.Entity.SunSoftDBEntities();
+    var venders = from v in db1.Venders
                   select new
                   {
                       ID = v.Id,
                       Name = v.NameRu
 
                   };
-    var categories = from v in db.Categories
+    var categories = from c in db1.Categories
                      select new
                      {
-                         ID = v.Id,
-                         Name = v.NameRu
+                         ID = c.Id,
+                         Name = c.NameRu
 
                      };
 
@@ -264,8 +264,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <h4>@Resources.Resource.information</h4>
                         <ul>
                             <li><a href="/home/index">@Resources.Resource.home</a></li>
-                            <li><a href="mens.html">@Resources.Resource.venders</a></li>
-                            <li><a href="womens.html">@Resources.Resource.categories</a></li>
+                            <li><a href="/home/index">@Resources.Resource.venders</a></li>
+                            <li><a href="/home/index">@Resources.Resource.categories</a></li>
                         </ul>
                     </div>
 
